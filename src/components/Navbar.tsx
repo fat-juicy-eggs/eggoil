@@ -39,6 +39,27 @@ const Navbar = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
+  const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
+
+  const handleMouseEnter = (event) => {
+      let iterations = 0;
+
+      const interval = setInterval(() => {
+          event.target.innerText = event.target.innerText.split("").map((letter, index) => {
+              if (index < iterations) {
+                  return event.target.dataset.value[index];
+              }
+              return characters[Math.floor(Math.random() * characters.length)];
+          }).join("");
+
+          if (iterations >= event.target.dataset.value.length) {
+              clearInterval(interval);
+          }
+
+          iterations += 1/5;
+      }, 50);
+  };
+  
   return (
     <nav
       className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none"
@@ -52,8 +73,8 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex'>
-            Daniel Yi
+          <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex' datavalue='Daniel' onMouseEnter={handleMouseEnter}>
+            Daniel
           </p>
         </Link>
 
