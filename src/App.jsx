@@ -13,12 +13,6 @@ const App = () => {
           <div id="hero" className='z-10'>
             <Hero scrollContainer={wrapperRef} />
           </div>
-          <div id="portfolio" className='relative z-30 bg-primary mt-[-2px]'>
-            <Portfolio />
-          </div>
-          <div id="experience" className='relative z-30 bg-primary'>
-            <Experience />
-          </div>
         </div>
       </div>
     </BrowserRouter>
