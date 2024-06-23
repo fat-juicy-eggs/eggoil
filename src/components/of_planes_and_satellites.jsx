@@ -10,8 +10,8 @@ const TheModel = ({ scale, position }) => {
     const { actions } = useAnimations(animations, modelRef);
 
     useEffect(() => {
-        if (actions && actions["Idle"]) {
-            actions["Idle"].play();
+        if (actions && actions["ArmatureAction"]) {
+            actions["ArmatureAction"].play();
         } else {
             console.log("Unable to Load");
         }
@@ -49,6 +49,12 @@ const ModelCanvas = ({ scrollContainer }) => {
     return (
         <Canvas className={'w-full h-full bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense fallback={<CanvasLoader />}>
+                <directionalLight position={[1, 1, 1]} intensity={2} />
+                <ambientLight intensity={0.5} />
+                <pointLight position={[10, 5, 10]} intensity={2} />
+                <spotLight position={[0, 50, 10]} angle={0.15} penumbra={1} intensity={2} />
+                <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+                    
                 <TheModel rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
             </Suspense>
         </Canvas>
