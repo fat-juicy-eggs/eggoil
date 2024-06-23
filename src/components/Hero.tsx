@@ -1,5 +1,5 @@
 import React from 'react';
-import ModelCanvas from ".";
+import { ModelCanvas } from ".";
 
 const Hero = ({ scrollContainer }) => {
     const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
