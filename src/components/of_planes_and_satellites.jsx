@@ -28,8 +28,8 @@ const ModelCanvas = ({ scrollContainer }) => {
     console.log("ModelCanvas loaded");
     const [rotationX, setRotationX] = useState(0);
     const [rotationY, setRotationY] = useState(0);
-    const [scale, setScale] = useState([2, 2, 2]);
-    const [position, setPosition] = useState([0.2, -0.7, 0]);
+    const [scale, setScale] = useState([5, 5, 5]);
+    const [position, setPosition] = useState([0, 0, 0]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -39,23 +39,15 @@ const ModelCanvas = ({ scrollContainer }) => {
             setRotationX(rotationXValue);
             setRotationY(rotationYValue);
         };
-
-        const handleResize = () => {
-            setScale([5, 5, 5]);
-            setPosition([0.2, -0.7, 0]);
-        };
-        handleResize();
         window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
         };
     }, [scrollContainer]);
 
     return (
-        <Canvas className={'w-full h-screen bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
+        <Canvas className={'w-full h-full bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense fallback={<CanvasLoader />}>
                 <directionalLight position={[1, 1, 1]} intensity={2} />
                 <ambientLight intensity={0.5} />
