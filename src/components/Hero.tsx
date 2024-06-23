@@ -27,14 +27,9 @@ const Hero = ({ scrollContainer }) => {
         <section id="hero" className="parallax">
             <div className='absolute top-[10%] flex flex-col items-start z-10'>
                 <div className="flex-1 lg:mb-0">
-                    <h1 onMouseEnter={handleMouseEnter} data-value="Daniel" className='font-medium text-white text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[100px] 2xl:text-[180px] leading-[110px] 2xl:leading-[160px]'>
-                        Daniel
-                    </h1>
-                </div>
-                <div className="flex-1 flex justify-start">
-                    <div className='font-bold text-[20px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left'>
-                        My <br/> personal <br/> portfolio.
-                    </div>
+                    <h2>
+                        My <br /> personal <br /> portfolio.
+                    </h2>
                 </div>
             </div>
             <ModelCanvas scrollContainer={scrollContainer} />
