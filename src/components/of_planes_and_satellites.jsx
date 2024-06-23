@@ -1,7 +1,7 @@
 import { useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
-import coolModel from "../assets/3d/of_planes_and_satellites.glb";
+import coolModel from "../assets/of_planes_and_satellites.glb";
 
 const theModel = ({ scale, position }) => {
     const modelRef = useRef();
