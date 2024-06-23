@@ -6,8 +6,7 @@ import CanvasLoader from "./Loader";
 
 const TheModel = ({ scale, position }) => {
     const modelRef = useRef();
-    const { scene, animations } = useGLTF(coolModel);
-    const  { actions } = useAnimations(animations, modelRef);
+    const { scene } = useGLTF(coolModel);
 
     useEffect(() => {
         if (actions && actions["Idle"]) {
