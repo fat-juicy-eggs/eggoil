@@ -32,7 +32,9 @@ const Hero = ({ scrollContainer }) => {
                     </h2>
                 </div>
             </div>
-            <ModelCanvas scrollContainer={scrollContainer} />
+            <div className='h-full w-full flex'>
+                <ModelCanvas scrollContainer={scrollContainer} />
+            </div>
         </section>
     );
 };
