@@ -1,18 +1,18 @@
 import React from 'react';
-import { ModelCanvas } from ".";
+import ModelCanvas from "."; 
 
 const Hero = ({ scrollContainer }) => {
     const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
 
     const handleMouseEnter = (event) => {
-        let iterations = 0
+        let iterations = 0;
 
         const interval = setInterval(() => {
             event.target.innerText = event.target.innerText.split("").map((letter, index) => {
                 if (index < iterations) {
                     return event.target.dataset.value[index];
                 }
-                return characters[Math.floor(Math.random() * 87)];
+                return characters[Math.floor(Math.random() * characters.length)];
             }).join("");
 
             if (iterations >= event.target.dataset.value.length) {
@@ -27,7 +27,7 @@ const Hero = ({ scrollContainer }) => {
         <section id="hero" className="parallax">
             <div className='absolute top-[10%] sm:top-[16%] lg:top-[24%] w-full mx-auto lg:pl-[38vh] lg:pr-[30vh] xl:pl-96 xl:pr-72 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row items-start z-10'>
                 <div className="flex-1 lg:mb-0">
-                    <h1 onMouseEnter={handleMouseEnter} data-value="Daniel" className='font-medium text-whtie text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[100px] 2x1:text-[180px] leading-[110px] 2x1:leading-[160px]'>
+                    <h1 onMouseEnter={handleMouseEnter} data-value="Daniel" className='font-medium text-white text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[100px] 2xl:text-[180px] leading-[110px] 2xl:leading-[160px]'>
                         Daniel
                     </h1>
                 </div>
