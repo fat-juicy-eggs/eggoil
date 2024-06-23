@@ -1,21 +1,28 @@
-import { Contact, Experience, Hero, Portfolio } from "./components"
+import { useEffect, useRef } from 'react';
+import { BrowserRouter } from "react-router-dom";
+import { Experience, Hero, Navbar, Portfolio } from "./components";
 
-function App() {
+const App = () => {
+  const wrapperRef = useRef(null);
+
   return (
-    <section className='relative z-0'>
-      <div className='wrapper'>
-        <div className='z-10'>
-          <Hero />
-        </div>
-        <div className='relative z-30 bg-primary mt-[-2px]'>
-          <Portfolio />
-        </div>
-        <div className='relative z-30 bg-primary'>
-          <Experience />
+    <BrowserRouter>
+      <div className='relative z-0 bg-primary'>
+        <Navbar />
+        <div className='wrapper' ref={wrapperRef}>
+          <div id="hero" className='z-10'>
+            <Hero scrollContainer={wrapperRef} />
+          </div>
+          <div id="portfolio" className='relative z-30 bg-primary mt-[-2px]'>
+            <Portfolio />
+          </div>
+          <div id="experience" className='relative z-30 bg-primary'>
+            <Experience />
+          </div>
         </div>
       </div>
-    </section>
-  )
-}
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
