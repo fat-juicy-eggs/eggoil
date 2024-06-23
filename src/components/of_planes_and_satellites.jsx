@@ -6,14 +6,21 @@ import CanvasLoader from "./Loader";
 
 const TheModel = ({ scale, position }) => {
     const modelRef = useRef();
-    const { scene } = useGLTF(coolModel);
+    const { scene, animations } = useGLTF(coolModel);
+    const { actions } = useAnimations(animations, modelRef);
+
+    useEffect(() => {
+        if (actions && actions["Idle"]) {
+            actions["Idle"].play();
+        }
+    }, [actions]);
 
     return (
         <mesh ref={modelRef} position={position} scale={scale} rotation={[-0.3, 0, 3]}>
             <primitive object={scene} />
         </mesh>
-    )
-}
+    );
+};
 
 const ModelCanvas = ({ scrollContainer }) => {
     const [rotationX, setRotationX] = useState(0);
