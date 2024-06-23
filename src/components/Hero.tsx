@@ -24,7 +24,7 @@ const Hero = ({ scrollContainer }) => {
     };
 
     return (
-        <section id="hero" className="h-full w-full flex">
+        <section id="hero" className="h-full w-full">
             <div className='absolute top-[10%] flex flex-col items-start z-10'>
                 <div className="flex-1 lg:mb-0">
                     <h2>
