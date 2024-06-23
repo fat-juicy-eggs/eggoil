@@ -12,6 +12,8 @@ const TheModel = ({ scale, position }) => {
     useEffect(() => {
         if (actions && actions["Idle"]) {
             actions["Idle"].play();
+        } else {
+            console.log("Unable to Load");
         }
     }, [actions]);
 
