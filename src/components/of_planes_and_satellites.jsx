@@ -2,6 +2,7 @@ import { useAnimations, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import coolModel from "../assets/of_planes_and_satellites.glb";
+import CanvasLoader from "./Loader";
 
 const theModel = ({ scale, position }) => {
     const modelRef = useRef();
@@ -65,6 +66,12 @@ const ModelCanvas = ({ scrollContainer }) => {
     return (
         <Canvas className={'w-full h-screen bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense>
+                <directionalLight position={[1, 1, 1]} intensity={2} />
+                <ambientLight intensity={0.5} />
+                <pointLight position={[10, 5, 10]} intensity={2} />
+                <spotLight position={[0, 50, 10]} angle={0.15} penumbra={1} intensity={2} />
+                <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
+                
                 <theModel rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
             </Suspense>
         </Canvas>
