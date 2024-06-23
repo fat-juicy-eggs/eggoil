@@ -18,7 +18,7 @@ const TheModel = ({ scale, position }) => {
     }, [actions]);
 
     return (
-        <mesh ref={modelRef} position={position} scale={scale} rotation={[-0.3, 0, 3]}>
+        <mesh ref={modelRef} position={position} scale={scale} rotation={[0, 0, 0]}>
             <primitive object={scene} />
         </mesh>
     );
@@ -41,22 +41,8 @@ const ModelCanvas = ({ scrollContainer }) => {
         };
 
         const handleResize = () => {
-            if (window.innerWidth < 768) {
-                setScale([1, 1, 1]);
-                setPosition([0.2, -0.1, 0]);
-            } else if (window.innerWidth < 1024) {
-                setScale([1.33, 1.33, 1.33]);
-                setPosition([0.2, -0.3, 0]);
-            } else if (window.innerWidth < 1280) {
-                setScale([1.5, 1.5, 1.5]);
-                setPosition([0.2, -0.4, 0]);
-            } else if (window.innerWidth < 1536) {
-                setScale([1.66, 1.66, 1.66]);
-                setPosition([0.2, -0.5, 0]);
-            } else {
-                setScale([2, 2, 2]);
-                setPosition([0.2, -0.7, 0]);
-            }
+            setScale([5, 5, 5]);
+            setPosition([0.2, -0.7, 0]);
         };
         handleResize();
         window.addEventListener("scroll", handleScroll);
