@@ -8,13 +8,6 @@ const TheModel = ({ scale, position }) => {
     const modelRef = useRef();
     const { scene } = useGLTF(coolModel);
 
-    useEffect(() => {
-        if (actions && actions["Idle"]) {
-            actions["Idle"].play();
-        } else {
-            console.error("Idle action not found in animations");
-        }
-    }, [actions]);
     return (
         <mesh ref={modelRef} position={position} scale={scale} rotation={[-0.3, 0, 3]}>
             <primitive object={scene} />
