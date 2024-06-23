@@ -13,9 +13,6 @@ function App() {
         <div className='relative z-30 bg-primary'>
           <Experience />
         </div>
-        <div className='relative z-30 bg-primary'>
-          <Contact />
-        </div>
       </div>
     </section>
   )
