@@ -10,8 +10,8 @@ const TheModel = ({ scale, position }) => {
     const { actions } = useAnimations(animations, modelRef);
 
     useEffect(() => {
-        if (actions && actions["Sphere.001Action"]) {
-            actions["Sphere.001Action"].play();
+        if (actions && actions["Animation"]) {
+            actions["Animation"].play();
         } else {
             console.log("Unable to Load");
         }
