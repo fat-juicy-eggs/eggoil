@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: monospace, monospace;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.parallax {
+  position: relative;
+  min-width: 2000px;
+  min-height: 75vh;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-areas: "stack";
+}
