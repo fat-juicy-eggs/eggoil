@@ -74,7 +74,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <AnimatedText text={Daniel} />
+          <AnimatedText text={'Daniel'} />
         </Link>
 
         <ul className='list-none hidden sm:flex flex-col gap-5'>
