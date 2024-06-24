@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { close, menu } from "../assets";
 import { navLinks } from "../data";
+import AnimatedText from "./AnimText";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
@@ -73,9 +74,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex' datavalue='Daniel' onMouseEnter={handleMouseEnter}>
-            Daniel
-          </p>
+          <AnimatedText text={Daniel} />
         </Link>
 
         <ul className='list-none hidden sm:flex flex-col gap-5'>
