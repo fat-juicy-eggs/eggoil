@@ -29,7 +29,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     const [rotationX, setRotationX] = useState(0);
     const [rotationY, setRotationY] = useState(0);
     const [scale, setScale] = useState([30, 30, 30]);
-    const [position, setPosition] = useState([0, 0, -5]);
+    const [position, setPosition] = useState([0, 0, -100]);
 
     useEffect(() => {
         const handleScroll = () => {
