@@ -49,7 +49,6 @@ const ModelCanvas = ({ scrollContainer }) => {
     return (
         <Canvas className={'w-full h-full bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense fallback={<CanvasLoader />}>
-                <ambientLight intensity={5000} />
                     
                 <TheModel rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
             </Suspense>
