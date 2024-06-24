@@ -4,7 +4,8 @@ import Portfolio from "./Portfolio";
 import ModelCanvas from "./of_planes_and_satellites";
 import Navbar from "./Navbar";
 import CanvasLoader from "./Loader";
+import AnimatedText from "./AnimText";
 
 export {
-    CanvasLoader, Experience, Hero, Portfolio, ModelCanvas, Navbar
+    CanvasLoader, Experience, Hero, Portfolio, ModelCanvas, Navbar, AnimatedText
 };
