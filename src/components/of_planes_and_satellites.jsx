@@ -10,8 +10,8 @@ const TheModel = ({ scale, position }) => {
     const { actions } = useAnimations(animations, modelRef);
 
     useEffect(() => {
-        if (actions && actions["Animation"]) {
-            actions["Animation"].play();
+        if (actions && actions["Take_001"]) {
+            actions["Take_001"].play();
         } else {
             console.log("Unable to Load");
         }
@@ -28,7 +28,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     console.log("ModelCanvas loaded");
     const [rotationX, setRotationX] = useState(0);
     const [rotationY, setRotationY] = useState(0);
-    const [scale, setScale] = useState([1, 1, 1]);
+    const [scale, setScale] = useState([50, 50, 50]);
     const [position, setPosition] = useState([0, 0, 0]);
 
     useEffect(() => {
