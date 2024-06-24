@@ -36,7 +36,7 @@ const AnimatedText = ({ text }) => {
     }, [characters]);
 
     return (
-        <p ref={h1Ref} data-value={text} className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex'>
+        <p ref={pRef} data-value={text} className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex'>
             {text}
         </p>
     );
