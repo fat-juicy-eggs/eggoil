@@ -5,22 +5,22 @@ const Hero = ({ scrollContainer }) => {
     const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
 
     const handleMouseEnter = (event) => {
-        let iterations = 0;
+        let iterations = 0
 
         const interval = setInterval(() => {
             event.target.innerText = event.target.innerText.split("").map((letter, index) => {
                 if (index < iterations) {
                     return event.target.dataset.value[index];
                 }
-                return characters[Math.floor(Math.random() * characters.length)];
+                return characters[Math.floor(Math.random() * 87)];
             }).join("");
-
+    
             if (iterations >= event.target.dataset.value.length) {
                 clearInterval(interval);
             }
-
+    
             iterations += 1/5;
-        }, 50);
+        }, 50)
     };
 
     return (
