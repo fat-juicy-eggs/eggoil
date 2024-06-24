@@ -10,8 +10,8 @@ const TheModel = ({ scale, position }) => {
     const { actions } = useAnimations(animations, modelRef);
 
     useEffect(() => {
-        if (actions && actions["Take_001"]) {
-            actions["Take_001"].play();
+        if (actions && actions["Take 001"]) {
+            actions["Take 001"].play();
         } else {
             console.log("Unable to Load");
         }
