@@ -73,7 +73,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex' datavalue='Daniel' onMouseEnter={handleMouseEnter()}>
+          <p className='text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex' datavalue='Daniel' onMouseEnter={handleMouseEnter}>
             Daniel
           </p>
         </Link>
