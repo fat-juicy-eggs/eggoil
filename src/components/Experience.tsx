@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { SectionWrapper } from "../hoc";
 
-const Contact = () => {
+const Experience = () => {
   return (
     <div
       className="md:m-12 md:px-48 flex flex-col sm:flex-row gap-10 overflow-hidden"
@@ -35,4 +35,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Experience, "experience");
