@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionWrapper from '../hoc/SectionWrapper';
+import { SectionWrapper } from '../hoc';
 
 const Bio = () => {
     return (
