@@ -20,13 +20,18 @@ const Bio = () => {
                 &nbsp;
             </span>
             <div className="section">
-                <div className='w-full h-fit z-40'>
-                  <div className='flex flex-col w-1/2 text-center justify-center'>
+                <div className='w-full mt-[-2px] flex flex-col md:flex-row gap-5'>
+                  <div className='relative w-full md:w-3/5'>
                     <h2 className='text-white font-bold text-[40px]'>
                       Daniel Yi
                     </h2>
-                    <img src={daniel} className='w-2/3 inset-y-0 right-0 absolute' alt='me'/>
+                    <img src={daniel} className='w-full h-auto object-cover md:rounded-3xl' alt='me'/>
                   </div>
+                </div>
+                <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
+                    <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>
+                        Hey! I'm a guy in high school with passions all over the place. Scroll down to learn more about what I've done and maybe reach out to me (not recommended /j)
+                    </p>
                 </div>
             </div>
         </motion.section>
