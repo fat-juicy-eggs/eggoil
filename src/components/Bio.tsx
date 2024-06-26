@@ -1,7 +1,6 @@
 import React from 'react';
 import { SectionWrapper } from '../hoc';
 import { motion } from 'framer-motion';
-import { Picture } from '../assets/danielyi.png';
 
 const Bio = () => {
     const variants = (staggerChildren, delayChildren) => {
@@ -25,7 +24,7 @@ const Bio = () => {
                     <h2 className='text-white font-bold text-[40px]'>
                       Daniel Yi
                     </h2>
-                    <img src={Picture} className='w-2/3' alt='me'/>
+                    <img src='./danielyi.png' className='w-2/3' alt='me'/>
                   </div>
                 </div>
             </div>
