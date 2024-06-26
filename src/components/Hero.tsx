@@ -14,7 +14,6 @@ const Hero = ({ scrollContainer }) => {
             </div>
             <ModelCanvas scrollContainer={scrollContainer} />
         </section>
-        <br /><br /><br /><br />
     );
 };
 
