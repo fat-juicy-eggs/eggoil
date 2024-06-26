@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,6 +24,7 @@
   min-height: 75vh;
   width: 100%;
   left: 50%;
+  transform: translateX(-30%);
   display: grid;
   grid-template-areas: "stack";
 }
