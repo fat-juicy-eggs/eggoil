@@ -3,7 +3,7 @@ import React from 'react';
 const Bio = () => {
     return (
         <section className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
-            <span className='hash-span' id={idName}>
+            <span className='hash-span' id='bio'>
                 &nbsp;
             </span>
             <div className="section">
