@@ -28,7 +28,7 @@ const Bio = () => {
                 </div>
             </div>
         </motion.section>
-        <br/><br/>
+        <br /><br />
     );
 };
 
