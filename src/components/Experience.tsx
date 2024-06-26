@@ -3,7 +3,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 import { SectionWrapper } from "../hoc";
-import { styles } from "../styles";
 
 const Contact = () => {
   return (
@@ -30,7 +29,7 @@ const Contact = () => {
         }}
         className='flex-[0.8] md:pb-40 mx-4 sm:mx-auto'
       >
-        <h3 className={styles.sectionText}>Contact</h3>
+        <h3>Contact</h3>
       </motion.div>
     </div>
   );
