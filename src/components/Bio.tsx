@@ -1,11 +1,18 @@
 import React from 'react';
 import { SectionWrapper } from '../hoc';
 import { motion } from 'framer-motion';
-import { staggerContainer } from '../utils/motion';
 
 const Bio = () => {
     return (
-        <motion.section variants={staggerContainer()} initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
+        <motion.section variants={
+            hidden: {},
+            show: {
+              transition: {
+              staggerChildren: staggerChildren,
+              delayChildren: delayChildren || 0,
+          }}
+        }
+        initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
             <span className='hash-span' id={idName}>
                 &nbsp;
             </span>
