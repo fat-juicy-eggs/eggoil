@@ -29,7 +29,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     const [rotationX, setRotationX] = useState(0);
     const [rotationY, setRotationY] = useState(0);
     const [scale, setScale] = useState([0.06, 0.06, 0.06]);
-    const [position, setPosition] = useState([-10, -30, -100]);
+    const [position, setPosition] = useState([0, -30, -100]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,7 +47,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     }, [scrollContainer]);
 
     return (
-        <Canvas className={'w-1/2 h-screen bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
+        <Canvas className={'w-1/3 h-screen bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense fallback={<CanvasLoader />}>
                 <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
                 <ambientLight intensity={3} />
