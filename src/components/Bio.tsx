@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionWrapper } from '../hoc';
 import { motion } from 'framer-motion';
-import { daniel } from '../assets/danielyi.jpg';
+import daniel from '../assets/danielyi.jpg';
 
 const Bio = () => {
     const variants = (staggerChildren, delayChildren) => {
