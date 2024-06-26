@@ -13,9 +13,9 @@ const App = () => {
           <div id="hero" className='z-10'>
             <Hero scrollContainer={wrapperRef} />
           </div>
-        </div>
-        <div className='wrapper'>
-          <Bio />
+          <div id="bio" className='z-10'>
+            <Bio />
+          </div>
         </div>
       </div>
     </BrowserRouter>
