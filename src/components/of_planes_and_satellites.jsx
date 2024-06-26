@@ -18,7 +18,7 @@ const TheModel = ({ scale, position }) => {
     }, [actions]);
 
     return (
-        <mesh ref={modelRef} position={position} scale={scale} rotation={[0, 0, 0]}>
+        <mesh ref={modelRef} position={position} scale={scale} rotation={[0, 0.8, 0.1]}>
             <primitive object={scene} />
         </mesh>
     );
@@ -28,7 +28,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     console.log("ModelCanvas loaded");
     const [rotationX, setRotationX] = useState(0);
     const [rotationY, setRotationY] = useState(0);
-    const [scale, setScale] = useState([20, 20, 20]);
+    const [scale, setScale] = useState([2, 2, 2]);
     const [position, setPosition] = useState([0, -3, 0]);
 
     useEffect(() => {
