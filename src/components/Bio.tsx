@@ -25,7 +25,9 @@ const Bio = () => {
                     <h2 className='text-white font-bold text-[40px]'>
                       Daniel Yi
                     </h2>
-                    <img src={daniel} className='w-2/3 inset-y-0 right-0' alt='me'/>
+                    <div className='w-2/3 inset-y-0 right-0 absolute'>
+                        <img src={daniel} className='w-2/3 inset-y-0 right-0' alt='me'/>
+                    </div>
                   </div>
                 </div>
             </div>
