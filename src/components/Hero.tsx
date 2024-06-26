@@ -3,33 +3,14 @@ import { ModelCanvas } from ".";
 import { useState } from 'react';
 
 const Hero = ({ scrollContainer }) => {
-    const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
-
-    const handleMouseEnter = (event) => {
-        let iterations = 0
-
-        const interval = setInterval(() => {
-            event.target.innerText = event.target.innerText.split("").map((letter, index) => {
-                if (index < iterations) {
-                    return event.target.dataset.value[index];
-                }
-                return characters[Math.floor(Math.random() * 87)];
-            }).join("");
-    
-            if (iterations >= event.target.dataset.value.length) {
-                clearInterval(interval);
-            }
-    
-            iterations += 1/5;
-        }, 50)
-    };
-
     return (
         <section id="hero" className="parallax">
-            <div className="flex-1 object-center">
-              <h1 className='font-medium text-white text-[40px]'>
-                Welcome.
-              </h1>
+            <div className='absolute top-[10%] w-full mx-auto flex flex-col items-start z-10'>
+                <div className='flex-1 mb-0'>
+                    <h2 className='font-medium text-white text-[40px]'>
+                        Scroll down.
+                    </h2>
+                </div>
             </div>
             <ModelCanvas scrollContainer={scrollContainer} />
         </section>
