@@ -14,7 +14,7 @@ const App = () => {
             <Hero scrollContainer={wrapperRef} />
           </div>
           <div id="bio" className='z-10'>
-            <Bio />
+            <Experience />
           </div>
         </div>
       </div>
