@@ -49,7 +49,7 @@ const ModelCanvas = ({ scrollContainer }) => {
     return (
         <Canvas className={'w-full h-screen bg-transparent z-10'} camera={{ near: 0.1, far: 1000 }}>
             <Suspense fallback={<CanvasLoader />}>
-                <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={5} />
+                <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" intensity={1} />
                 <ambientLight intensity={3} />
                     
                 <TheModel rotationX={rotationX} rotationY={rotationY} scale={scale} position={position} />
