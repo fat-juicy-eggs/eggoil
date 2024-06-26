@@ -26,12 +26,10 @@ const Hero = ({ scrollContainer }) => {
 
     return (
         <section id="hero" className="parallax">
-            <div className='flex flex-col'>
-                <div className="flex-1 lg:mb-0">
-                    <h2>
-                        My <br /> personal <br /> portfolio.
-                    </h2>
-                </div>
+            <div className="flex-1 lg:mb-0">
+              <h1 className='font-medium text-white text-[40px]'>
+                Welcome.
+              </h1>
             </div>
             <ModelCanvas scrollContainer={scrollContainer} />
         </section>
