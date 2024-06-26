@@ -26,7 +26,7 @@ const Hero = ({ scrollContainer }) => {
 
     return (
         <section id="hero" className="parallax">
-            <div className="flex-1 lg:mb-0">
+            <div className="flex-1 object-center">
               <h1 className='font-medium text-white text-[40px]'>
                 Welcome.
               </h1>
