@@ -34,8 +34,8 @@ const ModelCanvas = ({ scrollContainer }) => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = scrollContainer.current.scrollTop;
-            const rotationXValue = scrollTop * -0.006;
-            const rotationYValue = scrollTop * -0.0075;
+            const rotationXValue = scrollTop * -0.6;
+            const rotationYValue = scrollTop * -0.75;
             setRotationX(rotationXValue);
             setRotationY(rotationYValue);
         };
