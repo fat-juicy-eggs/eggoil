@@ -34,3 +34,19 @@
   padding-bottom: 100px;
   display: block;
 }
+
+.parallax__content {
+  --parallax-speed: 210;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .parallax__content {
+    flex-direction: row;
+    text-align: left;
+  }
+}
