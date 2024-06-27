@@ -16,6 +16,9 @@ const App = () => {
           <div id="bio" className='z-10'>
             <Bio />
           </div>
+          <div id='experience' className='z-10'>
+            <Experience />
+          </div>
         </div>
       </div>
     </BrowserRouter>
