@@ -25,7 +25,7 @@ const Bio = () => {
             viewport={{ once: true, amount: 0.25 }}
             className='px-0 2xl:px-60 py-10 2xl:py-16 max-w-full mx-auto relative z-0'
           >
-            <span className='hash-span' id={idName}>
+            <span className='hash-span' id='bio'>
               &nbsp;
             </span>
             <div className='text-center md:text-left md:px-20 lg:px-40'>
