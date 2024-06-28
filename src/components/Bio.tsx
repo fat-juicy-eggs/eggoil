@@ -4,8 +4,6 @@ import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 import { portfolio } from "../data";
-import { SectionWrapper } from "../hoc";
-import { styles } from "../styles";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
 const Bio = () => {
