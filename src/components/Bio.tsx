@@ -2,8 +2,6 @@ import daniel from '../assets/danielyi.jpg';
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
-import { portfolio } from "../data";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
 const Bio = () => {
