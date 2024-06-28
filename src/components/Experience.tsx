@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { useInView } from 'react-intersection-observer';
 
 import { StaggerContainer } from "../utils/motion";
 
