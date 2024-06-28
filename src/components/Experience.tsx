@@ -2,8 +2,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 
-import { StaggerContainer } from "../utils/motion";
-
 const Experience = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -15,7 +13,7 @@ const Experience = () => {
       }
   }, [controls, inView]);
   return (
-    <motion.section variants={staggerContainer()} initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
+    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
         <span className='hash-span' id='experience'>
             &nbsp;
         </span>
