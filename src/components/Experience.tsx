@@ -20,7 +20,7 @@ const Experience = () => {
         </span>
         <div className='text-center md:text-left md:px-20 lg:px-40'>
           <motion.div variants={textVariant()}>
-            <h2 className='text-white font-bold md:text-[80px] sm:text-[50px] text-[40px]'>Research: NIST SHIP</h2>
+            <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>Research: NIST SHIP</h2>
           </motion.div>
         </div>
     </motion.section>
