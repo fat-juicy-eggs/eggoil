@@ -17,7 +17,7 @@ const App = () => {
             <Bio />
           </div>
           <div id='experience' className='z-10'>
-            
+            <Experience />
           </div>
         </div>
       </div>
