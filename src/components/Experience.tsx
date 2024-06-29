@@ -23,7 +23,7 @@ const Experience = () => {
             <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>Research: NIST SHIP</h2>
           </motion.div>
         </div>
-        <div className='w-full mt-[-2px] flex gap-5 mx-[5px] md:mx-[5px] sm:mx-auto'>
+        <div className='w-full mt-[-2px] flex gap-5 mx-2'>
           <motion.div ref={ref} animate={controls} initial='hidden' variants={fadeIn("up", "spring", 0, 0.75)}>
             <h4 className='text-white md:text-[30px] sm:text-[18px] text-[15px]'>This is the title of the paper</h4>
             <div className='relative w-full md:w-3/5'>
