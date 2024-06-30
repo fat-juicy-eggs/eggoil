@@ -27,7 +27,7 @@ const Experience = () => {
           <motion.div ref={ref} animate={controls} initial='hidden' variants={fadeIn("up", "spring", 0, 0.75)}>
             <h4 className='text-white md:text-[30px] sm:text-[18px] text-[15px]'>This is the title of the paper</h4>
             <div className='relative w-full mx-[5px]'>
-              <iframe src="https://docs.google.com/gview?url=https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf&embedded=true" class='w-full h-1/2 mx-[5px]'></iframe>
+              <iframe src="https://docs.google.com/gview?url=https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf&embedded=true" fill></iframe>
             </div>
           </motion.div>
         </div>
