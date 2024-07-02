@@ -23,14 +23,24 @@ const Experience = () => {
             <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>Research: NIST SHIP</h2>
           </motion.div>
         </div>
-        <div className='w-full mt-[-2px] flex gap-5 mx-2' style={{height:1vh;}}>
-          <motion.div ref={ref} animate={controls} initial='hidden' variants={fadeIn("up", "spring", 0, 0.75)}>
-            <h4 className='text-white md:text-[30px] sm:text-[18px] text-[15px]'>This is the title of the paper</h4>
-            <div className='relative w-full mx-[5px]'>
-              <iframe src="https://docs.google.com/gview?url=https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf&embedded=true" className="px-[10px]"></iframe>
-            </div>
-          </motion.div>
-        </div>
+        <motion.div
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={fadeIn("up", "spring", 0, 0.75)}
+          className='w-full mt-[-2px] flex flex-col md:flex-row-reverse gap-5'
+        >
+          <div className='relative w-full md:w-3/5'>
+            <object className='w-full h-auto' type="application/pdf" data="https://0e894d7378904f25da001d4032d4c163.cdn.bubble.io/f1717472409050x638129927429342300/Business%20Plan.pdf">
+              <p>Error: PDF could not load</p>
+            </object>
+          </div>
+    
+          <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
+            <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>{name}</h3>
+            <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>{description}</p>
+          </div>
+        </motion.div>
     </motion.section>
   );
 };
