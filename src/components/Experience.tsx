@@ -2,7 +2,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
-import ImageGallery from "react-image-gallery";
 
 const Experience = () => {
   const controls = useAnimation();
@@ -56,7 +55,6 @@ const Experience = () => {
           </motion.div>
         </div>
         <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex'>
-          <ImageGallery items={images} />
         </motion.div>
     </motion.section>
   );
