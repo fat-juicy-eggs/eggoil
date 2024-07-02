@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 const Experience = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-      threshold: 0.1,
+      threshold: [0,0.1],
   });
   useEffect(() => {
       if (inView) {
