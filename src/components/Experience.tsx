@@ -14,7 +14,7 @@ const Experience = () => {
       }
   }, [controls, inView]);
   return (
-    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0' height=1vh>
+    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0' height={{1v}}h>
         <span className='hash-span' id='experience'>
             &nbsp;
         </span>
@@ -30,7 +30,7 @@ const Experience = () => {
           variants={fadeIn("up", "spring", 0, 0.75)}
           className='w-full mt-[-2px] flex flex-col md:flex-row-reverse gap-5'
         >
-          <div className='relative w-full md:w-3/5'>
+          <div className='relative w-2/3 md:w-3/5'>
             <object className='w-full h-auto' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
               <p>Error: PDF could not load</p>
             </object>
