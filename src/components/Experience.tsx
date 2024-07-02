@@ -31,7 +31,7 @@ const Experience = () => {
           className='w-full mt-[-2px] flex flex-col md:flex-row-reverse gap-5'
         >
           <div className='relative w-2/3 md:w-3/5'>
-            <object className='w-full h-auto' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
+            <object className='w-full h-full px-1 mx-1' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
               <p>Error: PDF could not load</p>
             </object>
           </div>
