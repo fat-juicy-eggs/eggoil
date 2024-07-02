@@ -43,6 +43,7 @@ const Experience = () => {
         <span className='hash-span' id='experience'>
             &nbsp;
         </span>
+        <div height={{100px}}></div>
         <motion.div
           ref={ref}
           animate={controls}
