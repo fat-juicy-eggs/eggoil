@@ -28,7 +28,7 @@ const Experience = () => {
           animate={controls}
           initial="hidden"
           variants={fadeIn("up", "spring", 0, 0.75)}
-          className='w-full mt-[-2px] flex flex-col md:flex-row-reverse gap-5'
+          className='w-full mt-[-2px] flex flex-col md:flex-row-reverse'
         >
           <div className='relative w-2/3 md:w-3/5'>
             <object className='w-full h-full px-20' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
