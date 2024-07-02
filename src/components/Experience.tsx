@@ -14,7 +14,7 @@ const Experience = () => {
       }
   }, [controls, inView]);
   return (
-    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
+    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0' height=1vh>
         <span className='hash-span' id='experience'>
             &nbsp;
         </span>
@@ -38,7 +38,7 @@ const Experience = () => {
     
           <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
             <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>NIST SHIP</h3>
-            <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>Brief description!!</p>
+            <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>2024: Identifying multi-objective optimization in an active learning loop for automated machine learning. Using Python with torch, tensorflow, jax, scipy, and scikit.</p>
           </div>
         </motion.div>
     </motion.section>
