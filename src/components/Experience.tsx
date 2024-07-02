@@ -40,10 +40,11 @@ const Experience = () => {
             <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>2024: Identifying multi-objective optimization in an active learning loop for automated materials discovery. Using Python with torch, tensorflow, jax, scipy, and scikit, and the dataset from <a href="https://www.sciencedirect.com/science/article/pii/S096697950500186X">this paper</a>. Research was conducted with a NIST researcher and is expected to be used in a future autonomous lab project. </p>
           </div>
         </motion.div>
+    </motion.section>
+    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
         <span className='hash-span' id='experience'>
-            &nbsp;
+          &nbsp;
         </span>
-        <div style={{height: '50vh'}}></div>
         <motion.div
           ref={ref}
           animate={controls}
