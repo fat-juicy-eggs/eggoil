@@ -91,7 +91,7 @@ const Experience = () => {
       }
   }, [controls, inView]);
   return (
-    <NISTPaper />
+    <EEPaper />
   );
 };
 
