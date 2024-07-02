@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const NISTPaper = () => {
+const Experience = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
       threshold: 0.1,
@@ -41,21 +41,7 @@ const NISTPaper = () => {
         </div>
       </motion.div>
     </motion.section>
-  );
-};
-
-const EEPaper = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-      threshold: 0.1,
-  });
-  useEffect(() => {
-      if (inView) {
-          controls.start("show");
-      }
-  }, [controls, inView]);
-  return (
-    <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2xl:px-60 py-10 2xl:py-16 max-w-full mx-auto relative z-0'>
+    <section className='px-0 2xl:px-60 py-10 2xl:py-16 max-w-full mx-auto relative z-0'>
         <span className='hash-span' id='experience'>
           &nbsp;
         </span>
@@ -76,22 +62,7 @@ const EEPaper = () => {
             <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>2024: Research on how piezo-generated electricity output can be maximized through the use of computer vision heatmaps and a calculation of average electric output in my high school. Covers the IB EE categories of Computer Science and Physics, making it a World Studies essay. </p>
           </div>
         </motion.div>
-    </motion.section>
-  );
-};
-
-const Experience = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-      threshold: 0.1,
-  });
-  useEffect(() => {
-      if (inView) {
-          controls.start("show");
-      }
-  }, [controls, inView]);
-  return (
-    <EEPaper />
+    </section>
   );
 };
 
