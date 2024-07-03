@@ -19,6 +19,9 @@ const App = () => {
           <div id='experience' className='z-10'>
             <Experience />
           </div>
+          <div id='models' className='z-10'>
+            <Projects />
+          </div>
         </div>
       </div>
     </BrowserRouter>
