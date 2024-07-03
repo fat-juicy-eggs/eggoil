@@ -15,7 +15,7 @@ const Preview = ({ url }) => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
         const title = doc.querySelector('title')?.textContent || 'Title not found';
-        const description = doc.querySelector('meta[name="description"]')?.getAttribute('content') || 'Description unavailable';
+        const description = doc.querySelector('meta[name="og:description"]')?.getAttribute('content') || 'Description unavailable';
         const image = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
 
         setPreviewData({ title, description, image });
@@ -43,6 +43,10 @@ const Preview = ({ url }) => {
         <p className="mt-4">404: Could not fetch preview data</p>
       </div>
     );
+  }
+
+  if (!previewData.image) {
+    console.log("error");
   }
 
   const handleClick = () => {
