@@ -34,7 +34,7 @@ const Projects = () => {
             <div className="section">
                 <div className='text-center md:text-left md:px-20 lg:px-40'>
                   <motion.div variants={textVariant()}>
-                    <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>3D modeling!</h2>
+                    <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>3D modeling!</h2><img src="/blender.svg" alt="logo" height={30} width={30} />
                   </motion.div>
                 </div>
                 <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
