@@ -37,7 +37,7 @@ const Projects = () => {
                     <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>3D modeling!</h2>
                   </motion.div>
                 </div>
-                <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex'>
+                <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                   <ImageGallery items={images} showThumbnails={false} showFullscreenButton={true} showPlayButton={true} showBullets={true} autoPlay={true} slideInterval={5000} />
                 </motion.div>
             </div>
