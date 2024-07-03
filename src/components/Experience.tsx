@@ -61,6 +61,7 @@ const Experience = () => {
           <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>2024: Research on how piezo-generated electricity output can be maximized through the use of computer vision heatmaps and a calculation of average electric output in my high school. Covers the IB EE categories of Computer Science and Physics, making it a World Studies essay. </p>
         </div>
       </motion.div>
+      <div style={{height: "33vh"}}></div>
     </section>
   );
 };
