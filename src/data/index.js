@@ -11,4 +11,8 @@ export const navLinks = [
     id: "experience",
     title: "Research",
   },
+  {
+    id: "models",
+    title: "Art??",
+  },
 ];
