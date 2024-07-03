@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 import CanvasLoader from "./Loader";
 import AnimatedText from "./AnimText";
 import Bio from "./Bio";
+import Otherprojects from "./Otherprojects";
 export {
-    CanvasLoader, Experience, Hero, Projects, ModelCanvas, Navbar, AnimatedText, Bio
+    CanvasLoader, Experience, Hero, Projects, ModelCanvas, Navbar, AnimatedText, Bio, Otherprojects
 };
