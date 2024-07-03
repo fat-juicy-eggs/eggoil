@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
+import Preview from "./Preview";
 
 const Otherprojects = () => {
     const controls = useAnimation();
@@ -28,7 +29,7 @@ const Otherprojects = () => {
                 <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
                 <div className='mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
                   <div className='relative w-full md:w-3/5'>
-                    
+                    <Preview url={'https://chill-ai.vercel.app/'} />
                   </div>
                 </div>
                   <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
