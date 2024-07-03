@@ -7,6 +7,7 @@ import CanvasLoader from "./Loader";
 import AnimatedText from "./AnimText";
 import Bio from "./Bio";
 import Otherprojects from "./Otherprojects";
+import Preview from "./Preview.jsx";
 export {
-    CanvasLoader, Experience, Hero, Projects, ModelCanvas, Navbar, AnimatedText, Bio, Otherprojects
+    CanvasLoader, Experience, Hero, Projects, ModelCanvas, Navbar, AnimatedText, Bio, Otherprojects, Preview
 };
