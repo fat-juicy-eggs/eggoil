@@ -27,7 +27,6 @@ const Projects = () => {
       }
     }, [controls, inView]);
     return (
-        <div style={{height: "33vh"}}></div>
         <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
             <span className='hash-span' id='experience'>
                 &nbsp;
