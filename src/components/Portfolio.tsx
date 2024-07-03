@@ -1,7 +1,19 @@
 import React from 'react';
-import SectionWrapper from '../hoc/SectionWrapper';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const Projects = () => {
+    const images = [
+        {
+            original: '/one.png',
+        },
+        {
+            original: '/two.png',
+        },
+        {
+            original: '/three.png',
+        },
+    ];
     return (
         <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
             <span className='hash-span' id='experience'>
@@ -14,11 +26,11 @@ const Projects = () => {
                   </motion.div>
                 </div>
                 <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex'>
-                  
+                  <ImageGallery items={images} showThumbnails={false} showFullscreenButton={true} showPlayButton={true} showBullets={true} autoPlay={true} slideInterval={5000} />
                 </motion.div>
             </div>
         </motion.section>
     );
 };
 
-export default SectionWrapper(Projects, 'projects');
+export default Projects;
