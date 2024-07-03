@@ -1,6 +1,9 @@
-import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
+import { useInView } from 'react-intersection-observer';
+import { fadeIn, textVariant } from '../utils/motion';
 
 const Projects = () => {
     const images = [
@@ -14,6 +17,15 @@ const Projects = () => {
             original: '/three.png',
         },
     ];
+    const controls = useAnimation();
+    const { ref, inView } = useInView({
+      threshold: 0,
+    });
+    useEffect(() => {
+      if (inView) {
+        controls.start("show");
+      }
+    }, [controls, inView]);
     return (
         <motion.section initial="hidden" whileInView='show' viewport={{ once:true, amount:0.25 }} className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
             <span className='hash-span' id='experience'>
