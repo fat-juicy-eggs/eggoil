@@ -7,5 +7,5 @@ import CanvasLoader from "./Loader";
 import AnimatedText from "./AnimText";
 import Bio from "./Bio";
 export {
-    CanvasLoader, Experience, Hero, Portfolio, ModelCanvas, Navbar, AnimatedText, Bio
+    CanvasLoader, Experience, Hero, Projects, ModelCanvas, Navbar, AnimatedText, Bio
 };
