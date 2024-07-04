@@ -17,8 +17,7 @@ const Preview = ({ url }) => {
 
         const title = doc.querySelector('title')?.textContent || 'Title not found';
         const description = doc.querySelector('meta[property="og:description"]')?.getAttribute('content') || 'Description unavailable';
-        const imagePath = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
-        const image = imagePath ? new URL(imagePath, url).href : '';
+        const image = 'https://chill-ai.vercel.app/chilllogo.png';
 
         console.log('Title:', title);
         console.log('Description:', description);
