@@ -13,6 +13,9 @@ const Otherprojects = () => {
         controls.start("show");
       }
     }, [controls, inView]);
+    const handleClick = (event) => {
+        window.open("https://chill-ai.vercel.app/", "_blank").focus();
+    }
     return (
       <section className='px-0 2xl:px-60 py-10 2xl:py-16 max-w-full mx-auto relative z-0'>
           <span className='hash-span' id='otherprojects'>
@@ -28,11 +31,14 @@ const Otherprojects = () => {
               <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                 <div className='mt-10 md:mt-20 flex'>
-                  <div className='relative w-3/5'>
-                      <a href="https://chill-ai.vercel.app/"><iframe 
+                  <div className='relative w-3/5 bg-secondary rounded-md'>
+                      <iframe 
                           src="https://chill-ai.vercel.app/"
                           title="Site Preview"
-                      /></a>
+                          scrolling="no"
+                          onClick={handleClick}
+                          fill
+                      />
                   </div>
                 </div>
                 <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
