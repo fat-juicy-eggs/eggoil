@@ -2,7 +2,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
-import Preview from "./Preview";
 
 const Otherprojects = () => {
     const controls = useAnimation();
@@ -29,7 +28,6 @@ const Otherprojects = () => {
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                 <div className='mt-10 md:mt-20 flex'>
                   <div className='relative w-3/5'>
-                    <Preview url={'https://chill-ai.vercel.app/'} />
                   </div>
                 </div>
                 <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
