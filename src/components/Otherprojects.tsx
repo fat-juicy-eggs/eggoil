@@ -21,7 +21,8 @@ const Otherprojects = () => {
                 doc.body.style.height = `${100 / scale}%`;
                 doc.body.style.overflow = 'hidden';
             };
-        }, [url]);
+        }
+    }, [url]);
     useEffect(() => {
       if (inView) {
         controls.start("show");
