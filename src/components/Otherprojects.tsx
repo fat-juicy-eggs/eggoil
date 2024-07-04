@@ -22,7 +22,7 @@ const Otherprojects = () => {
                 doc.body.style.overflow = 'hidden';
             };
         }
-    }, [url]);
+    }, ["https://chill-ai.vercel.app/"]);
     useEffect(() => {
       if (inView) {
         controls.start("show");
