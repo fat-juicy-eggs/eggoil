@@ -8,6 +8,20 @@ const Otherprojects = () => {
     const { ref, inView } = useInView({
       threshold: 0,
     });
+    const iframeRef = useRef(null);
+    useEffect(() => {
+        const iframe = iframeRef.current;
+        if (iframe && iframe.contentWindow) {
+            iframe.onload = () => {
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                const scale = 0.5; // Adjust scale as needed
+                doc.body.style.transform = `scale(${scale})`;
+                doc.body.style.transformOrigin = 'top left';
+                doc.body.style.width = `${100 / scale}%`;
+                doc.body.style.height = `${100 / scale}%`;
+                doc.body.style.overflow = 'hidden';
+            };
+        }, [url]);
     useEffect(() => {
       if (inView) {
         controls.start("show");
