@@ -30,14 +30,14 @@ const Otherprojects = () => {
               <div style={{height: "20vh"}}></div>
               <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
-                <div className='mt-10 md:mt-20 flex'>
+                <div className='flex'>
                   <div className='relative w-full h-auto bg-secondary rounded-md'>
                       <iframe 
                           src="https://chill-ai.vercel.app/"
                           title="Site Preview"
                           scrolling="no"
                           onClick={handleClick}
-                          style={{width: "200px", height: "200px"}}
+                          style={{width: "400px", height: "200px"}}
                       />
                   </div>
                 </div>
