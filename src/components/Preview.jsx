@@ -59,7 +59,7 @@ const Preview = ({ url }) => {
       <h3>{previewData.title}</h3>
       <p>{previewData.description}</p>
       {previewData.image ? (
-        <img src={previewData.image} alt="Link Preview" style={{ width: "400px", height: "225px"}}/>
+        <img src={previewData.image} alt="Link Preview" className="w-full h-auto"/>
       ) : (
         <p>Image not available</p>
       )}
