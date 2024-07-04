@@ -14,7 +14,7 @@ const Otherprojects = () => {
         if (iframe && iframe.contentWindow) {
             iframe.onload = () => {
                 const doc = iframe.contentDocument || iframe.contentWindow.document;
-                const scale = 0.5; // Adjust scale as needed
+                const scale = 0.1; // Adjust scale as needed
                 doc.body.style.transform = `scale(${scale})`;
                 doc.body.style.transformOrigin = 'top left';
                 doc.body.style.width = `${100 / scale}%`;
