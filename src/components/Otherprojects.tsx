@@ -24,6 +24,7 @@ const Otherprojects = () => {
                   <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>Some of my other projects</h2>
                 </motion.div>
               </div>
+              <div style={{height: "20vh"}}></div>
               <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                 <div className='mt-10 md:mt-20 flex'>
