@@ -27,8 +27,8 @@ const Otherprojects = () => {
               </div>
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                 <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
-                <div className='mt-10 md:mt-20 flex flex-col gap-10 md:gap-20'>
-                  <div className='relative w-full md:w-3/5'>
+                <div className='mt-10 md:mt-20 flex'>
+                  <div className='auto w-3/5'>
                     <Preview url={'https://chill-ai.vercel.app/'} />
                   </div>
                 </div>
