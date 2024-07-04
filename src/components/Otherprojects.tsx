@@ -32,12 +32,12 @@ const Otherprojects = () => {
                   <div className='absolute w-3/5'>
                     <Preview url={'https://chill-ai.vercel.app/'} />
                   </div>
+                </div>
                   <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
                     <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>
                       We created a computer vision model that classifies areas of urban heat islands and presented as a business pitch in the Moonshot Pirates Shape the Future challenge, earning 2nd place.
                     </p>
                   </div>
-                </div>
             </motion.div>
           </div>
       </section>
