@@ -14,9 +14,15 @@ const Preview = ({ url }) => {
         const data = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
+
         const title = doc.querySelector('title')?.textContent || 'Title not found';
-        const description = doc.querySelector('meta[name="og:description"]')?.getAttribute('content') || 'Description unavailable';
-        const image = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+        const description = doc.querySelector('meta[property="og:description"]')?.getAttribute('content') || 'Description unavailable';
+        const imagePath = doc.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+        const image = imagePath ? new URL(imagePath, url).href : '';
+
+        console.log('Title:', title);
+        console.log('Description:', description);
+        console.log('Image:', image);
 
         setPreviewData({ title, description, image });
       } catch (error) {
@@ -45,10 +51,6 @@ const Preview = ({ url }) => {
     );
   }
 
-  if (!previewData.image) {
-    console.log("error");
-  }
-
   const handleClick = () => {
     window.open(url, '_blank');
   };
@@ -57,7 +59,11 @@ const Preview = ({ url }) => {
     <div onClick={handleClick} style={{ cursor: 'pointer' }}>
       <h3>{previewData.title}</h3>
       <p>{previewData.description}</p>
-      {previewData.image && <img src={previewData.image} alt="Link Preview" />}
+      {previewData.image ? (
+        <img src={previewData.image} alt="Link Preview" />
+      ) : (
+        <p>Image not available</p>
+      )}
     </div>
   );
 };
