@@ -53,7 +53,7 @@ const Otherprojects = () => {
                           title="Site Preview"
                           scrolling="no"
                           onClick={handleClick}
-                          style={{width: "400px", height: "200px"}}
+                          style={{width: "500px", height: "250px"}}
                       />
                   </div>
                 </div>
