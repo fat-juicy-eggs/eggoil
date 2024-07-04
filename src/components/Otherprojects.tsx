@@ -45,7 +45,7 @@ const Otherprojects = () => {
               <div style={{height: "20vh"}}></div>
               <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>CHILL AI: Modeling Heat Islands</h3>
               <div style={{height: "10vh"}}></div>
-              <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
+              <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center cursor-pointer'  onClick={handleClick}>
                 <div className='flex'>
                   <div className='relative w-full h-auto bg-secondary rounded-md'>
                       <iframe 
@@ -58,9 +58,9 @@ const Otherprojects = () => {
                       />
                   </div>
                 </div>
-                <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left' onClick={handleClick}>
+                <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
                   <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl'>
-                    We created a computer vision model that classifies areas of urban heat islands and presented as a business pitch in the Moonshot Pirates Shape the Future challenge, earning 2nd place.
+                    We created a computer vision model that classifies areas of urban heat islands and presented as a business pitch in the Moonshot Pirates Shape the Future challenge, earning 2nd place. Click here to visit the website.
                   </p>
                 </div>
             </motion.div>
