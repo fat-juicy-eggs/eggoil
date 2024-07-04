@@ -28,6 +28,10 @@ const Otherprojects = () => {
               <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
                 <div className='mt-10 md:mt-20 flex'>
                   <div className='relative w-3/5'>
+                      <a href="https://chill-ai.vercel.app/"><iframe 
+                          src="https://chill-ai.vercel.app/"
+                          title="Site Preview"
+                      /></a>
                   </div>
                 </div>
                 <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
