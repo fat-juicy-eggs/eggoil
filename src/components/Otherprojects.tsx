@@ -48,6 +48,7 @@ const Otherprojects = () => {
                   <div className='relative w-full h-auto bg-secondary rounded-md'>
                       <iframe 
                           src="https://chill-ai.vercel.app/"
+                          ref={iframeRef}
                           title="Site Preview"
                           scrolling="no"
                           onClick={handleClick}
