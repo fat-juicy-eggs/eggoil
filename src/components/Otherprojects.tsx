@@ -55,6 +55,7 @@ const Otherprojects = () => {
                           scrolling="no"
                           onClick={handleClick}
                           style={{width: "500px", height: "250px"}}
+                          className='rounded-lg'
                       />
                   </div>
                 </div>
