@@ -14,7 +14,7 @@ const Otherprojects = () => {
         if (iframe && iframe.contentWindow) {
             iframe.onload = () => {
                 const doc = iframe.contentDocument || iframe.contentWindow.document;
-                const scale = 5; // Adjust scale as needed
+                const scale = 0.1; // Adjust scale as needed
                 doc.body.style.transform = `scale(${scale})`;
                 doc.body.style.transformOrigin = 'top left';
                 doc.body.style.width = `${100 / scale}%`;
@@ -28,8 +28,8 @@ const Otherprojects = () => {
         controls.start("show");
       }
     }, [controls, inView]);
-    const handleClick = ({ url }) => {
-        window.open(url, "_blank").focus();
+    const handleClick = (event) => {
+        window.open("https://chill-ai.vercel.app/", "_blank").focus();
     }
     return (
       <section className='px-0 2xl:px-60 py-10 2xl:py-16 max-w-full mx-auto relative z-0'>
@@ -53,7 +53,7 @@ const Otherprojects = () => {
                           ref={iframeRef}
                           title="Site Preview"
                           scrolling="no"
-                          onClick={handleClick("https://chill-ai.vercel.app/")}
+                          onClick={handleClick}
                           style={{width: "500px", height: "250px"}}
                           className='rounded-lg'
                       />
