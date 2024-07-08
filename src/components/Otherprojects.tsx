@@ -65,6 +65,21 @@ const Otherprojects = () => {
                   </p>
                 </div>
             </motion.div>
+            <div style={{height: "20vh"}}></div>
+            <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>Amateur Game Development</h3>
+            <div style={{height: "10vh"}}></div>
+            <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center cursor-pointer'  onClick={handleClick}>
+              <div className='flex'>
+                <div className='relative w-full h-auto bg-secondary rounded-md'>
+                  
+                </div>
+              </div>
+              <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
+                <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl z-10'>
+                  I programmed games as a hobby, using Unity with C# with Blender for 3D modeling (animations and rigging was from free sources online, simple animation was done in Unity or Blender). I was able to experiment with using Unity's ML agents and built a minigame for my friends to play. 
+                </p>
+              </div>
+            </motion.div>
           </div>
       </section>
     );
