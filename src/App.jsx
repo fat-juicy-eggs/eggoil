@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Experience, Hero, Navbar, Projects, Bio, Otherprojects } from "./components";
 
 const App = () => {
@@ -10,7 +10,7 @@ const App = () => {
       <div className='relative z-0 bg-primary'>
         <Navbar />
         <div className='wrapper' ref={wrapperRef}>
-          <Switch>
+          <Routes>
             <Route path="/" exact>
               <div id="hero" className='z-10'>
                 <Hero scrollContainer={wrapperRef} />
@@ -28,7 +28,7 @@ const App = () => {
                 <Otherprojects />
               </div>
             </Route>
-          </Switch>
+          </Routes>
         </div>
       </div>
     </Router>
