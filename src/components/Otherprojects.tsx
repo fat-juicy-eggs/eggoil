@@ -66,7 +66,7 @@ const Otherprojects = () => {
                 </div>
             </motion.div>
             <div style={{height: "20vh"}}></div>
-            <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>Amateur Game Development</h3>
+            <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl text-right'>Amateur Game Development</h3>
             <div style={{height: "10vh"}}></div>
             <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center cursor-pointer'  onClick={handleClick}>
               <div className='flex'>
