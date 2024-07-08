@@ -11,23 +11,25 @@ const App = () => {
         <Navbar />
         <div className='wrapper' ref={wrapperRef}>
           <Routes>
-            <Route path="/" exact>
-              <div id="hero" className='z-10'>
-                <Hero scrollContainer={wrapperRef} />
-              </div>
-              <div id="bio" className='z-10'>
-                <Bio />
-              </div>
-              <div id='experience' className='z-10'>
-                <Experience />
-              </div>
-              <div id='models' className='z-10'>
-                <Projects />
-              </div>
-              <div id='projects' className='z-10'>
-                <Otherprojects />
-              </div>
-            </Route>
+            <Route path="/" element={
+              <>
+                <div id="hero" className='z-10'>
+                  <Hero scrollContainer={wrapperRef} />
+                </div>
+                <div id="bio" className='z-10'>
+                  <Bio />
+                </div>
+                <div id='experience' className='z-10'>
+                  <Experience />
+                </div>
+                <div id='models' className='z-10'>
+                  <Projects />
+                </div>
+                <div id='projects' className='z-10'>
+                  <Otherprojects />
+                </div>
+              </>
+            } />
           </Routes>
         </div>
       </div>
