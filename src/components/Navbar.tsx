@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { close, menu } from "../assets"; // Assuming you have close and menu icons
+import { close, menu } from "../assets";
 import { navLinks } from "../data";
 import AnimatedText from "./AnimText";
 
@@ -18,7 +18,7 @@ const Navbar = () => {
         setToggle(false);
       }
 
-      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For mobile or negative scrolling
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); 
     };
 
     window.addEventListener("scroll", handleScroll);
