@@ -7,23 +7,23 @@ import AnimatedText from "./AnimText";
 const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
-    let lastScrollTop = 0;
-
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+
       if (scrollTop > lastScrollTop) {
-        setToggle(false); // Hide the navbar when scrolling down
+        // Scrolling down
+        setToggle(false);
       }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-      setScrolled(scrollTop > 100);
+
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // For mobile or negative scrolling
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollTop]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("div[id]");
@@ -45,7 +45,7 @@ const Navbar = () => {
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
-  
+
   return (
     <nav
       className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none"
