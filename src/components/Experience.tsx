@@ -2,12 +2,18 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
+import { Document, Page } from 'react-pdf';
 
 const Experience = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
       threshold: 0,
   });
+  const [numPages, setNumPages] = useState<number>();
+  const [pageNumber, setPageNumber] = useState<number>(1);
+  function onDocLoadSuccess({ numPages }: { numPages: number }): void {
+    setNumPages(numPages);
+  }
   useEffect(() => {
       if (inView) {
           controls.start("show");
@@ -31,9 +37,9 @@ const Experience = () => {
         className='w-full mt-[-2px] flex flex-col md:flex-row-reverse'
       >
         <div className='relative w-2/3 md:w-3/5'>
-          <object className='w-full h-full px-20' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
-            <p>Error: PDF could not load</p>
-          </object>
+          <Document file="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf" onLoadSuccess={onDocLoadSuccess}>
+            <Page pageNumber={pageNumber} />
+          </Document>
         </div>
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>NIST SHIP</h3>
