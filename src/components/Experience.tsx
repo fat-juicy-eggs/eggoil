@@ -43,7 +43,7 @@ const Experience = () => {
         className='w-full mt-[-2px] flex flex-col md:flex-row-reverse'
       >
         <div className='relative w-2/3 md:w-3/5'>
-          <Document file="https://pdfobject.com/pdf/sample.pdf" onLoadSuccess={onDocLoadSuccess}>
+          <Document file="https://pdfobject.com/pdf/sample.pdf" onLoadSuccess={onDocLoadSuccess} className='w-full h-full px-20'>
             <Page pageNumber={pageNumber} />
           </Document>
         </div>
