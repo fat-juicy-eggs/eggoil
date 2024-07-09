@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import menuIcon from "../assets/menu.svg";
-import closeIcon from "../assets/close.svg";
+import { close, menu } from "../assets";
 import { navLinks } from "../data";
 import AnimatedText from "./AnimText";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-
-      setLastScrollTop((prevScrollTop) => {
-        if (scrollTop > prevScrollTop) {
-          // Scrolling down
-          setToggle(false);
-        }
-        return scrollTop <= 0 ? 0 : scrollTop;
-      });
+      setScrolled(scrollTop > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -38,7 +31,7 @@ const Navbar = () => {
       },
       {
         threshold: 0.2,
-        rootMargin: "0px 0px -50% 0px",
+        rootMargin: '0px 0px -50% 0px'
       }
     );
 
@@ -48,11 +41,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none">
-      <div className="w-full flex justify-between items-start mx-auto">
+    <nav
+      className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none"
+    >
+      <div className='w-full flex justify-between items-start mx-auto'>
         <Link
-          to="/"
-          className="flex items-start"
+          to='/'
+          className='flex items-start'
           onClick={() => {
             setActive("hero");
             window.scrollTo(0, 0);
@@ -61,7 +56,7 @@ const Navbar = () => {
           <AnimatedText text={"Daniel"} />
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-col gap-5">
+        <ul className='list-none hidden sm:flex flex-col gap-5'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -78,20 +73,20 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
-            src={toggle ? closeIcon : menuIcon}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer"
+            src={toggle ? close : menu}
+            alt='menu'
+            className='w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-white`}
+            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
