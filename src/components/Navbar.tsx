@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { close, menu } from "../assets";
+import { close, menu } from "../assets"; // Assuming you have close and menu icons
 import { navLinks } from "../data";
 import AnimatedText from "./AnimText";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
@@ -47,9 +47,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none"
-    >
+    <nav className="w-full flex items-center bg-gradient-to-b from-black sm:bg-none p-8 sm:px-16 sm:py-10 fixed z-40 pointer-events-none">
       <div className='w-full flex justify-between items-start mx-auto'>
         <Link
           to='/'
@@ -90,7 +88,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-black`}
+            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-white`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
@@ -100,7 +98,7 @@ const Navbar = () => {
                     active === nav.id ? "text-quaternary" : "text-secondary"
                   }`}
                   onClick={() => {
-                    setToggle(false);
+                    setToggle(!toggle);
                     setActive(nav.id);
                   }}
                 >
