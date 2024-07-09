@@ -6,7 +6,7 @@ import AnimatedText from "./AnimText";
 
 const Navbar = () => {
   const [active, setActive] = useState("hero");
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
   useEffect(() => {
