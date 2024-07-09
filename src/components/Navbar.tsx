@@ -10,8 +10,14 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    let lastScrollTop = 0;
+
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+      if (scrollTop > lastScrollTop) {
+        setToggle(false); // Hide the navbar when scrolling down
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
       setScrolled(scrollTop > 100);
     };
 
@@ -39,27 +45,6 @@ const Navbar = () => {
 
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
-
-  const characters = '!"#$%&()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz{|}~';
-
-  const handleMouseEnter = (event) => {
-      let iterations = 0;
-
-      const interval = setInterval(() => {
-          event.target.innerText = event.target.innerText.split("").map((letter, index) => {
-              if (index < iterations) {
-                  return event.target.dataset.value[index];
-              }
-              return characters[Math.floor(Math.random() * characters.length)];
-          }).join("");
-
-          if (iterations >= event.target.dataset.value.length) {
-              clearInterval(interval);
-          }
-
-          iterations += 1/5;
-      }, 50);
-  };
   
   return (
     <nav
