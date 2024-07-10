@@ -44,7 +44,7 @@ const Experience = () => {
       >
         <div className='relative w-2/3 md:w-3/5'>
           <Document file="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf" onLoadSuccess={onDocLoadSuccess}>
-            <Page pageNumber={pageNumber} height={0.2vh}/>
+            <Page pageNumber={pageNumber} height={"0.5vh"}/>
           </Document>
         </div>
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
