@@ -1,10 +1,11 @@
 import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
@@ -12,24 +13,23 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 const Experience = () => {
   const controls = useAnimation();
-  const { ref, inView } = useInView({
-      threshold: 0,
-  });
+  const { ref, inView } = useInView({ threshold: 0 });
   const [numPages, setNumPages] = useState<number>();
   const [pageNumber, setPageNumber] = useState<number>(1);
+
   function onDocLoadSuccess({ numPages }: { numPages: number }): void {
     setNumPages(numPages);
   }
+
   useEffect(() => {
-      if (inView) {
-          controls.start("show");
-      }
+    if (inView) {
+      controls.start("show");
+    }
   }, [controls, inView]);
+
   return (
     <section className='px-0 2x1:px-60 py-10 2x1:py-16 max-w-full mx-auto relative z-0'>
-      <span className='hash-span' id='experience'>
-          &nbsp;
-      </span>
+      <span className='hash-span' id='experience'>&nbsp;</span>
       <div className='text-center md:text-left md:px-20 lg:px-40'>
         <motion.div variants={textVariant()}>
           <h2 className='text-white font-bold md:text-[60px] sm:text-[37px] text-[30px]'>Research</h2>
@@ -43,19 +43,22 @@ const Experience = () => {
         className='w-full mt-[-2px] flex flex-col md:flex-row-reverse'
       >
         <div className='relative w-2/3 md:w-3/5'>
-          <Document file="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf" onLoadSuccess={onDocLoadSuccess}>
-            <Page pageNumber={pageNumber} height={"0.5vh"}/>
+          <Document
+            file="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf"
+            onLoadSuccess={onDocLoadSuccess}
+          >
+            <Page pageNumber={pageNumber} height={500} /> {/* Adjust height as needed */}
           </Document>
         </div>
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>NIST SHIP</h3>
-          <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>2024: Identifying multi-objective optimization in an active learning loop for automated materials discovery. Using Python with torch, tensorflow, jax, scipy, and scikit, and the dataset from <a href="https://www.sciencedirect.com/science/article/pii/S096697950500186X">this paper</a>. Research was conducted with a NIST researcher and is expected to be used in a future autonomous lab project. </p>
+          <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>
+            2024: Identifying multi-objective optimization in an active learning loop for automated materials discovery...
+          </p>
         </div>
       </motion.div>
       <div style={{height: "20vh"}}></div>
-      <span className='hash-span' id='experience'>
-        &nbsp;
-      </span>
+      <span className='hash-span' id='experience'>&nbsp;</span>
       <motion.div
         ref={ref}
         animate={controls}
@@ -70,7 +73,9 @@ const Experience = () => {
         </div>
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-right md:text-left'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>IB EE</h3>
-          <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>2024: Research on how piezo-generated electricity output can be maximized through the use of computer vision heatmaps and a calculation of average electric output in my high school. Covers the IB EE categories of Computer Science and Physics, making it a World Studies essay. </p>
+          <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>
+            2024: Research on how piezo-generated electricity output can be maximized...
+          </p>
         </div>
       </motion.div>
       <div style={{height: "33vh"}}></div>
