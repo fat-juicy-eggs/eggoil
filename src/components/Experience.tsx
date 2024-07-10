@@ -42,7 +42,7 @@ const Experience = () => {
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>NIST SHIP</h3>
           <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>
-            2024: Identifying multi-objective optimization in an active learning loop for automated materials discovery...
+            2024: Identifying multi-objective optimization in an active learning loop for automated materials discovery. Using Python with torch, tensorflow, jax, scipy, and scikit, and the dataset from <a href="https://www.sciencedirect.com/science/article/pii/S096697950500186X">this paper</a>. Research was conducted with a NIST researcher and is expected to be used in a future autonomous lab project.
           </p>
         </div>
       </motion.div>
@@ -63,7 +63,7 @@ const Experience = () => {
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-right md:text-left'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>IB EE</h3>
           <p className='mt-4 text-secondary text-md sm:text-sm md:text-md lg:text-lg xl:text-xl 2xl:text-xl'>
-            2024: Research on how piezo-generated electricity output can be maximized...
+            2024: Research on how piezo-generated electricity output can be maximized through the use of computer vision heatmaps and a calculation of average electric output in my high school. Covers the IB EE categories of Computer Science and Physics, making it a World Studies essay. 
           </p>
         </div>
       </motion.div>
