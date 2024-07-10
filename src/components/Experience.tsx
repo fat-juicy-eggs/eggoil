@@ -2,14 +2,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
 
 const Experience = () => {
   const controls = useAnimation();
@@ -43,12 +35,9 @@ const Experience = () => {
         className='w-full mt-[-2px] flex flex-col md:flex-row-reverse'
       >
         <div className='relative w-2/3 md:w-3/5'>
-          <Document
-            file="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf"
-            onLoadSuccess={onDocLoadSuccess}
-          >
-            <Page pageNumber={pageNumber} height={500} /> {/* Adjust height as needed */}
-          </Document>
+          <object className='w-full h-full px-20' type="application/pdf" data="https://assets-global.website-files.com/603d0d2db8ec32ba7d44fffe/603d0e327eb2748c8ab1053f_loremipsum.pdf">
+            <p>Error: PDF could not load</p>
+          </object>
         </div>
         <div className='w-full md:w-2/5 px-6 md:p-16 flex flex-col justify-center text-left md:text-right'>
           <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl leading-tight'>NIST SHIP</h3>
