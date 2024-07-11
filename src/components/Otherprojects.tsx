@@ -84,7 +84,7 @@ const Otherprojects = () => {
             <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center'>
               <div className='flex'>
                 <div className='relative w-3/5 h-auto bg-secondary rounded-md'>
-                  <div className='w-full mt-[-2px] flex items-center justify-center mx-[-5px]'>
+                  <div className='w-full mt-[-2px] flex items-center justify-center h-full'>
                     <ImageGallery items={images} showThumbnails={false} showFullScreenButton={true} showPlayButton={true} showBullets={true} autoPlay={true} slideInterval={3000} />
                   </div>
                 </div>
