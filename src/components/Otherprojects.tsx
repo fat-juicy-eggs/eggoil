@@ -16,9 +16,6 @@ const Otherprojects = () => {
         {
             original: '/game3.png',
         },
-        {
-            original: '/game4.png',
-        },
     ];
     const controls = useAnimation();
     const { ref, inView } = useInView({
