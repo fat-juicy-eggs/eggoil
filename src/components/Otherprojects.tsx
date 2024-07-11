@@ -2,8 +2,24 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { fadeIn, textVariant } from '../utils/motion';
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 const Otherprojects = () => {
+    const images = [
+        {
+            original: '/game1.png',
+        },
+        {
+            original: '/game2.png',
+        },
+        {
+            original: '/game3.png',
+        },
+        {
+            original: '/game4.png',
+        },
+    ];
     const controls = useAnimation();
     const { ref, inView } = useInView({
       threshold: 0,
@@ -78,6 +94,9 @@ const Otherprojects = () => {
                 <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl z-10'>
                   I programmed games as a hobby, using Unity with C# with Blender for 3D modeling (animations and rigging was from free sources online, simple animation was done in Unity or Blender). I was able to experiment with using Unity's ML agents and built a minigame for my friends to play. 
                 </p>
+                <div className='w-full mt-[-2px] flex items-center justify-center'>
+                    <ImageGallery items={images} showThumbnails={false} showFullScreenButton={true} showPlayButton={true} showBullets={true} autoPlay={true} slideInterval={3000} />
+                </div>
               </div>
             </motion.div>
           </div>
