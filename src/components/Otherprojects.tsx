@@ -82,8 +82,8 @@ const Otherprojects = () => {
             <h3 className='text-white font-medium text-md sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl lg:text-5xl text-right'>Amateur Game Development</h3>
             <div style={{height: "10vh"}}></div>
             <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center cursor-pointer'>
-                <div className='flex'>
-                  <div className='relative w-3/5 h-auto bg-secondary rounded-md'>
+                <div className='flex w-3/5'>
+                  <div className='relative w-full h-auto bg-secondary rounded-md'>
                       <ImageGallery items={images} showThumbnails={false} showFullScreenButton={true} showPlayButton={true} showBullets={true} autoPlay={true} slideInterval={3000} />
                   </div>
                 </div>
