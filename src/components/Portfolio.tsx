@@ -16,6 +16,9 @@ const Projects = () => {
         {
             original: '/three.png',
         },
+        {
+            original: '/four.png',
+        },
     ];
     const controls = useAnimation();
     const { ref, inView } = useInView({
