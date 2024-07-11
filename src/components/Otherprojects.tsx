@@ -84,7 +84,7 @@ const Otherprojects = () => {
             <motion.div ref={ref} animate={controls} initial="hidden" variants={fadeIn("up", "spring", 0, 0.75)} className='w-full mt-[-2px] flex items-center justify-center cursor-pointer'>
                 <div className='w-full md:w-2/5 px-0 md:p-8 flex flex-col justify-center text-left md:text-left'>
                   <p className='mt-4 text-secondary text-sm sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl z-10'>
-                    I programmed games as a hobby, using Unity with C# with Blender for 3D modeling (animations and rigging was from free sources online, simple animation was done in Unity or Blender). I was able to experiment with using Unity's ML agents and built a minigame for my friends to play. 
+                    I programmed games as a hobby, using Unity with C# with Blender for 3D modeling (animations and rigging was from free sources online, simple animation was done in Unity or Blender). I was able to experiment with using Unity's ML agents and built a minigame.
                   </p>
                 </div>
                 <div className='flex w-3/5'>
