@@ -53,6 +53,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
+          <img src={'./favicon.ico'} />
           <AnimatedText text={"Daniel"} />
         </Link>
 
